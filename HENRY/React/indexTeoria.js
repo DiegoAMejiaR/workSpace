@@ -23,6 +23,15 @@ Crear app de React:
 >> create-react-app demo (demo es el  nombre que le damos a nuestra app,
     puede ser cualquier nombre.)
 
+* * *PRINCIPIO DE RESPONSABILIDAD ÚNICA * * *
+Establece que cada componente debe tener una única responsabilidad
+o función, lo que hace que sea más fácil de mnatener y reutilizar.
+
+* * * JSX * * *
+Es una extensión de sintaxis de js utilizada en React para describir
+la interfaz de usuario mediante la combinación de elementos
+HTML y js en una sola sintaxis.
+
 * * * QUE ES UN COMPONENETE * * *
 Es una unidad modular de la inferfaz de usuario. Permite dividir una
 aplicaciión en partes independientes y reutilizables para una mayor

@@ -6,8 +6,8 @@ const ListaPersonas = (props) => { // const ListaPersonas = ( {list} ) => Destru
   return (
     <div>
       {/* props.lista => array
-        props siempre es un objeto
-        Por cada elemento del array, mostrar una PersonaItem
+          props siempre es un objeto
+          Por cada elemento del array, mostrar una PersonaItem
       */}
       {props.lista.map(persona => {
         return <PersonaItem name={persona.name} age={persona.age} />;
