@@ -1,18 +1,5 @@
 import React from "react";
 
-/* const PersonaItem = (props) => {
-    return (
-        <div>
-            <hr></hr>
-            <p>Nombre: {props.name}</p>
-            <p>Edad: {props.age}</p>
-            <hr></hr>
-        </div>
-    );
-}
-
-export default PersonaItem; */
-
 class PersonaItem extends React.Component {
   // El constructor va a recibir los props
   constructor(props) {
@@ -32,3 +19,16 @@ class PersonaItem extends React.Component {
 
 export default PersonaItem;
 
+
+/* const PersonaItem = (props) => {
+    return (
+        <div>
+            <hr></hr>
+            <p>Nombre: {props.name}</p>
+            <p>Edad: {props.age}</p>
+            <hr></hr>
+        </div>
+    );
+}
+
+export default PersonaItem; */
