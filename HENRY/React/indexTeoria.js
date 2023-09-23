@@ -66,8 +66,8 @@ function HelloWorldComponent() {
 * * * CSS MODULE * * *
 La idea detrás de esto es tener lo mejor de los estilos anteriores:
 escribir en css propiamente dicho y mantener scopes locales.
-*/
-// ----------- modulo 1 -----------------------------
+
+----------- modulo 1 -----------------------------
 
 import style from './landingPage.module.css';
 
@@ -79,12 +79,44 @@ function langingPage() {
         </div>
     );
 }
+-------------- modulo 2 --------------------------
 
-/* -------------- modulo 2 --------------------------
+LandingPage.module.css
 .contenedor h3 {
     background-color: SpringGreen;
 }
 
 .titulo {
     font-size: 30px;
-} */
+} 
+*/
+
+/* 
+* * * STYLED-COMPONENTS * * *
+La idea básica de styled-components es hacer cumplir las mejores
+prácticas eliminando la asociación entre estilos y componentes
+*/
+
+//  -------------- modulo styledComponents.js -------------------------
+import styled from "styled-components"
+
+export const Titulo = styled.h3`
+    color: red;
+    font-size: 5em;
+`
+export const Contenedor = styled.div`
+    color: blue;
+`
+
+// --------- modulo  ---------------------------
+import {Contenedor, Titulo} from "./styledComponents";
+
+function langingPage() {
+    return(
+        <Contenedor>
+            <Titulo>Welcome!</Titulo>
+            <p>This is my web page...</p>
+        </Contenedor>
+    );
+}
+
