@@ -12,7 +12,6 @@ const ListaPersonas = (props) => { // const ListaPersonas = ( {list} ) => Destru
       {props.lista.map(persona => {
         return <PersonaItem name={persona.name} age={persona.age} />;
       })}
-
     </div>
   );
 }
