@@ -46,4 +46,45 @@ desarrollo.
 Las propiedades (props) son información y funcionalidades
 quele pueden heredar un componente a un componente hijo
 {nombre, descripción, prioridad, fecha}
+
+* * * REACT CSS * * *
+
+Inline Styling
+Pdemos escribir CSS en js
 */
+
+const divStyle = {
+    color: 'blue',
+    backgroundImage: 'url(' + imgUrl + ')'
+};
+
+function HelloWorldComponent() {
+    return <div style={divStyle}>Hello World"</div>;
+}
+
+/* 
+* * * CSS MODULE * * *
+La idea detrás de esto es tener lo mejor de los estilos anteriores:
+escribir en css propiamente dicho y mantener scopes locales.
+*/
+// ----------- modulo 1 -----------------------------
+
+import style from './landingPage.module.css';
+
+function langingPage() {
+    return(
+        <div className='{style.contenedor}'>
+            <h3 className='{style.titulo}'>Welcome!</h3>
+            <p>This is my web page...</p>
+        </div>
+    );
+}
+
+/* -------------- modulo 2 --------------------------
+.contenedor h3 {
+    background-color: SpringGreen;
+}
+
+.titulo {
+    font-size: 30px;
+} */
