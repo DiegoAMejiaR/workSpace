@@ -14,7 +14,7 @@ Ejemplo
 
 const numbers = [2, 5, 1, 7, 3, 9, 8];
 const total = numbers.reduce((a, b) => {
-    return x + y;
+  return x + y;
 })
 console.log(total);
 
@@ -54,12 +54,12 @@ Pdemos escribir CSS en js
 */
 
 const divStyle = {
-    color: 'blue',
-    backgroundImage: 'url(' + imgUrl + ')'
+  color: 'blue',
+  backgroundImage: 'url(' + imgUrl + ')'
 };
 
 function HelloWorldComponent() {
-    return <div style={divStyle}>Hello World"</div>;
+  return <div style={divStyle}>Hello World"</div>;
 }
 
 /* 
@@ -73,7 +73,7 @@ import style from './landingPage.module.css';
 
 function langingPage() {
     return(
-        <div className='{style.contenedor}'>
+        <div className={style.contenedor}>
             <h3 className='{style.titulo}'>Welcome!</h3>
             <p>This is my web page...</p>
         </div>
@@ -109,14 +109,47 @@ export const Contenedor = styled.div`
 `
 
 // --------- modulo  ---------------------------
-import {Contenedor, Titulo} from "./styledComponents";
+import { Contenedor, Titulo } from "./styledComponents";
 
 function langingPage() {
-    return(
-        <Contenedor>
-            <Titulo>Welcome!</Titulo>
-            <p>This is my web page...</p>
-        </Contenedor>
-    );
+  return (
+    <Contenedor>
+      <Titulo>Welcome!</Titulo>
+      <p>This is my web page...</p>
+    </Contenedor>
+  );
 }
+
+/* 
+* * * REACT ESTADOS LIFECYCLE * * *
+Qué es un estado?
+Es un objeto que contiene la información de un
+componente. Representa los datos que pueden cambiar
+y que afectan a cómo se renderiza en la interfaz
+de usuario.
+Tiene la particularidad de impactar sobre el ciclo de vida
+del componente.
+El estado es información propia del componente
+*/
+
+class EstadosClase extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+  render() {
+    const aumentar = () =>{
+      this.count > 0 && this.setState({count: this.state.count + 1})
+    }
+    return (
+      <div>
+        <h3>{this.state.count}</h3>
+        <button onClick={aumentar} >+</button>
+      </div>
+    )
+  }
+}
+
 
